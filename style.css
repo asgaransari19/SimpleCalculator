@@ -7,57 +7,121 @@
 .container {
   width: 100%;
   height: 100vh;
-  background-color: cadetblue;
-
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .calculator {
+  border: 1px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   /* background-color: yellow; */
-  background-color:  darkslategrey;
+  background-color: black;
   padding: 20px;
   border-radius: 10px;
 }
 
-.calculator form input{
-    border: 0;
-    outline: 0;
-    width: 60px;
-    height: 60px;
+.calculator form input {
+  border: 0;
+  outline: 0;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ffff;
+  border-radius: 10px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+  color: white;
+}
+
+form .display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+form .display input {
+  text-align: right;
+  flex: 1;
+  font-size: 25px;
+  box-shadow: none;
+}
+
+form input.equal {
+  width: 145px;
+  font-size: 10px;
+}
+
+form input.operator {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+b {
+  color: antiquewhite;
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    width: 100%;
+    height: 500px;
+  }
+
+  .calculator {
+    margin: 0;
+    height: auto;
+    width: 100%;
+    background-color: black;
     border-radius: 10px;
-    box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0, 0.2);
+    color: #ffff;
+  }
+
+  .display {
+    height: 80px;
+    width: 100%;
+    /* border: 2px solid; */
+  }
+
+  .display input {
+    border: 1px solid red;
+  }
+
+  form .display input {
+    text-align: left;
+    flex: 1;
+    font-size: 35px;
+    box-shadow: none;
+    border-radius: none;
+    border: 1px solid #ffff;
+  }
+
+  form input.operator {
+    font-size: 25px;
+  }
+
+  .calculator form input {
+    border: 1px solid;
+    outline: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 200;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.2);
     background: transparent;
     font-size: 20px;
     cursor: pointer;
     margin: 10px;
     color: white;
+  }
 
-}
-
-form .display{
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 0;
-}
-
-form .display input{
-text-align: right;
-flex: 1;
-font-size: 45px;
-box-shadow: none;
-}
-
-form input.equal{
-    width: 145px;
-}
-
-form input.operator{
-   font-size: 25px;
-    font-weight: bold;
-}
-
-b {
-    color: antiquewhite;
+  form input.equal {
+    width: 110px;
+    font-size: 10px;
+  }
 }
